@@ -5,6 +5,13 @@
 # alt-codes
 > Insert alt codes using meta key.
 
+Like many other editors you can insert [Alt-Codes](https://www.alt-codes.net/) 
+using alt key. Notice this will only works with numpad keys.
+
+
+*P.S. Inspired by `Notepad++` presets.*
+*P.S. Inspired by `VSCode` presets.*
+
 
 ## Usage
 
