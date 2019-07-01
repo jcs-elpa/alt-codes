@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Insert alt codes using meta key.
 ;; Keyword: alt codes insertion meta
-;; Version: 0.0.1
+;; Version: 0.0.2
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs090218/alt-codes
 
