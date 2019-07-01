@@ -65,13 +65,13 @@
         (setq insert-it t))
       (when (and insert-it
                  (not (string= alt-codes--code "")))
-        (let ((code (alt-codes--get-alt-codes alt-codes--code)))
+        (let ((code (alt-codes--get-symbol alt-codes--code)))
           (when code
             (insert code)))
         (setq-local alt-codes--code "")))))
 
 
-(defun alt-codes--get-alt-codes (code)
+(defun alt-codes--get-symbol (code)
   "Return the alt code by CODE."
   (cond ((string= code "1") "☺") ((string= code "2") "☻") ((string= code "3") "♥")
         ((string= code "4") "♦") ((string= code "5") "♣") ((string= code "6") "♠")
@@ -221,7 +221,7 @@
       (while (< index 256)
         (setq code-str (number-to-string index))
         (when reach-255 (setq code-str (concat "0" code-str)))
-        (setq code-str (alt-codes--get-alt-codes (number-to-string index)))
+        (setq code-str (alt-codes--get-symbol (number-to-string index)))
         (when code-str
           (insert (format "| %4d | %6s |\n" index code-str))
           (setq index (1+ index)))
@@ -238,7 +238,7 @@
   "Insert the alt-code by string."
   (interactive)
   (let* ((code (string-trim (read-string "Insert Alt-Code: ")))
-         (alt-code (alt-codes--get-alt-codes code)))
+         (alt-code (alt-codes--get-symbol code)))
     (if alt-code
         (insert alt-code)
       (user-error "Invalid Alt Code, please input the valid one"))))
