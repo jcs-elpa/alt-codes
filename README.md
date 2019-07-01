@@ -33,13 +33,6 @@ M-x alt-codes-insert
 ```
 
 
-### Table
-Print out all the Alt-Codes.
-```
-M-x alt-codes-table
-```
-
-
 ## Contribution
 
 If you would like to contribute to this project, you may either 

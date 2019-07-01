@@ -142,36 +142,6 @@
   "Return the alt code by CODE."
   (eval (cons 'pcase (cons code alt-codes--list))))
 
-
-;;;###autoload
-(defun alt-codes-table ()
-  "Print out the table of all Alt Code."
-  (interactive)
-  (switch-to-buffer-other-window "*Alt-Codes*")
-  (read-only-mode -1)
-  (erase-buffer)
-  (save-excursion
-    (insert "Alt-Codes.\nThe list of all Alt Codes for special characters and symbols.\n\n")
-    (let ((index 1)
-          (code-str nil)
-          (reach-255 nil))
-      (insert "| Code | Symbol |\n")
-      (insert "|------+--------|\n")
-      (while (< index 256)
-        (setq code-str (number-to-string index))
-        (when reach-255 (setq code-str (concat "0" code-str)))
-        (setq code-str (alt-codes--get-symbol (number-to-string index)))
-        (when code-str
-          (insert (format "| %4d | %6s |\n" index code-str))
-          (setq index (1+ index)))
-        (when (and (not reach-255)
-                   (= index 255))
-          (insert "\n")
-          (setq index 128)
-          (setq reach-255 t)))))
-  (view-mode)
-  (special-mode))
-
 ;;;###autoload
 (defun alt-codes-insert ()
   "Insert the alt-code by string."
