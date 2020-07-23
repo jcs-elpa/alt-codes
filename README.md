@@ -1,8 +1,7 @@
-[![Build Status](https://travis-ci.com/jcs090218/alt-codes.svg?branch=master)](https://travis-ci.com/jcs090218/alt-codes)
+[![Build Status](https://travis-ci.com/jcs-elpa/alt-codes.svg?branch=master)](https://travis-ci.com/jcs-elpa/alt-codes)
 [![MELPA](https://melpa.org/packages/alt-codes-badge.svg)](https://melpa.org/#/alt-codes)
 [![MELPA Stable](https://stable.melpa.org/packages/alt-codes-badge.svg)](https://stable.melpa.org/#/alt-codes)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
 
 # alt-codes
 > Insert alt codes using meta key.
@@ -10,16 +9,14 @@
 Like many other editors you can insert [Alt-Codes](https://www.alt-codes.net/) 
 using alt key. Notice this will only works with numpad keys.
 
-
 * *P.S. Inspired by `Notepad++` preset behaviour.*
 * *P.S. Inspired by `VSCode` preset behaviour.*
-
 
 ## Usage
 
 ### Insertion
-If you want to enable insertion using alt key then you need to 
-enable this.
+
+If you want to enable insertion using alt key then you need to enable this.
 
 ```el
 (alt-codes-mode t)
@@ -32,7 +29,6 @@ Or you can call this function to insert it manually.
 ```
 M-x alt-codes-insert
 ```
-
 
 ## Contribution
 
