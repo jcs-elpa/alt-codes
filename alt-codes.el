@@ -8,7 +8,7 @@
 ;; Keyword: alt codes insertion meta
 ;; Version: 0.0.4
 ;; Package-Requires: ((emacs "24.4"))
-;; URL: https://github.com/jcs090218/alt-codes
+;; URL: https://github.com/jcs-elpa/alt-codes
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -40,7 +40,7 @@
   "Insert alt codes using meta key."
   :prefix "alt-codes-"
   :group 'tools
-  :link '(url-link :tag "Repository" "https://github.com/jcs090218/alt-codes"))
+  :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/alt-codes"))
 
 
 (defvar alt-codes--list
