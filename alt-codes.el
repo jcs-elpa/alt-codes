@@ -32,16 +32,13 @@
 
 ;;; Code:
 
-
 (require 'subr-x)
-
 
 (defgroup alt-codes nil
   "Insert alt codes using meta key."
   :prefix "alt-codes-"
   :group 'tools
   :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/alt-codes"))
-
 
 (defvar alt-codes--list
   '(("1" "☺") ("2" "☻") ("3" "♥") ("4" "♦") ("5" "♣") ("6" "♠")
@@ -113,6 +110,7 @@
 (defvar-local alt-codes--code ""
   "Recording current key code.")
 
+;;; Core
 
 (defun alt-codes--pre-command-hook ()
   "Hook run before every command."
@@ -137,7 +135,6 @@
             (insert code)))
         (setq-local alt-codes--code "")))))
 
-
 (defun alt-codes--get-symbol (code)
   "Return the alt code by CODE."
   (eval (cons 'pcase (cons code alt-codes--list))))
@@ -152,6 +149,7 @@
         (insert alt-code)
       (user-error "Invalid Alt Code, please input the valid one"))))
 
+;;; Entry
 
 (defun alt-codes--enable ()
   "Enable 'alt-codes-mode'."
@@ -160,7 +158,6 @@
 (defun alt-codes--disable ()
   "Disable 'alt-codes-mode'."
   (remove-hook 'pre-command-hook #'alt-codes--pre-command-hook t))
-
 
 ;;;###autoload
 (define-minor-mode alt-codes-mode
@@ -179,7 +176,6 @@
 (define-globalized-minor-mode global-alt-codes-mode
   alt-codes-mode alt-codes-turn-on-alt-codes-mode
   :require 'alt-codes)
-
 
 (provide 'alt-codes)
 ;;; alt-codes.el ends here
