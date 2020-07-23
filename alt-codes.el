@@ -1,4 +1,4 @@
-;;; alt-codes.el --- Insert alt codes using meta key.  -*- lexical-binding: t; -*-
+;;; alt-codes.el --- Insert alt codes using meta key  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019  Shen, Jen-Chieh
 ;; Created date 2019-06-23 00:27:18
