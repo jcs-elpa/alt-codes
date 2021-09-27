@@ -1,10 +1,11 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![MELPA](https://melpa.org/packages/alt-codes-badge.svg)](https://melpa.org/#/alt-codes)
 [![MELPA Stable](https://stable.melpa.org/packages/alt-codes-badge.svg)](https://stable.melpa.org/#/alt-codes)
-[![CI](https://github.com/jcs-elpa/alt-codes/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/alt-codes/actions/workflows/test.yml)
 
 # alt-codes
 > Insert alt codes using meta key.
+
+[![CI](https://github.com/jcs-elpa/alt-codes/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/alt-codes/actions/workflows/test.yml)
 
 Like many other editors you can insert [Alt-Codes](https://www.alt-codes.net/) 
 using alt key. Notice this will only works with numpad keys.
