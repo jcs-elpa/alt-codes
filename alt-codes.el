@@ -1,13 +1,13 @@
 ;;; alt-codes.el --- Insert alt codes using meta key  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019  Shen, Jen-Chieh
+;; Copyright (C) 2019-2022  Shen, Jen-Chieh
 ;; Created date 2019-06-23 00:27:18
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Insert alt codes using meta key.
 ;; Keyword: alt codes insertion meta
 ;; Version: 0.0.5
-;; Package-Requires: ((emacs "24.4"))
+;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/jcs-elpa/alt-codes
 
 ;; This file is NOT part of GNU Emacs.
@@ -117,7 +117,7 @@
   (when (symbolp last-input-event)
     (let* ((lie-str (symbol-name last-input-event))
            (key-id "")
-           (insert-it nil))
+           insert-it)
       (if (and (stringp lie-str)
                (string-match-p "M-kp-" lie-str))
           (progn
@@ -130,9 +130,8 @@
         (setq insert-it t))
       (when (and insert-it
                  (not (string= alt-codes--code "")))
-        (let ((code (alt-codes--get-symbol alt-codes--code)))
-          (when code
-            (insert code)))
+        (when-let ((code (alt-codes--get-symbol alt-codes--code)))
+          (ignore-errors (insert code)))
         (setq-local alt-codes--code "")))))
 
 (defun alt-codes--get-symbol (code)
@@ -143,11 +142,10 @@
 (defun alt-codes-insert ()
   "Insert the alt-code by string."
   (interactive)
-  (let* ((code (string-trim (read-string "Insert Alt-Code: ")))
-         (alt-code (alt-codes--get-symbol code)))
-    (if alt-code
-        (insert alt-code)
-      (user-error "Invalid Alt Code, please input the valid one"))))
+  (if-let* ((code (string-trim (read-string "Insert Alt-Code: ")))
+            (alt-code (alt-codes--get-symbol code)))
+      (ignore-errors (insert alt-code))
+    (user-error "Invalid Alt Code, please input the valid one")))
 
 ;;; Entry
 
