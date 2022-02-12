@@ -114,7 +114,7 @@
 
 (defun alt-codes--pre-command-hook ()
   "Hook run before every command."
-  (when (symbolp last-input-event)
+  (when (and (symbolp last-input-event) (not buffer-read-only))
     (let* ((lie-str (symbol-name last-input-event))
            (key-id "")
            insert-it)
@@ -129,7 +129,7 @@
               (setq insert-it t)))
         (setq insert-it t))
       (when (and insert-it
-                 (not (string= alt-codes--code "")))
+                 (not (string-empty-p alt-codes--code)))
         (when-let ((code (alt-codes--get-symbol alt-codes--code)))
           (ignore-errors (insert code)))
         (setq-local alt-codes--code "")))))
@@ -162,9 +162,7 @@
   "Minor mode for inserting `alt-codes'."
   :lighter " alt-codes"
   :group alt-codes
-  (if alt-codes-mode
-      (alt-codes--enable)
-    (alt-codes--disable)))
+  (if alt-codes-mode (alt-codes--enable) (alt-codes--disable)))
 
 (defun alt-codes-turn-on-alt-codes-mode ()
   "Turn on the 'alt-codes-mode'."
