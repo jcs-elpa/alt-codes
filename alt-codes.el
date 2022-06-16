@@ -4,11 +4,10 @@
 ;; Created date 2019-06-23 00:27:18
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
-;; Description: Insert alt codes using meta key.
-;; Keyword: alt codes insertion meta
+;; URL: https://github.com/jcs-elpa/alt-codes
 ;; Version: 0.0.5
 ;; Package-Requires: ((emacs "26.1"))
-;; URL: https://github.com/jcs-elpa/alt-codes
+;; Keywords: alt codes insertion meta
 
 ;; This file is NOT part of GNU Emacs.
 
