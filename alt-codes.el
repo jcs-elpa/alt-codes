@@ -7,7 +7,7 @@
 ;; URL: https://github.com/jcs-elpa/alt-codes
 ;; Version: 0.0.5
 ;; Package-Requires: ((emacs "26.1"))
-;; Keywords: alt codes insertion meta
+;; Keywords: convenience alt codes insertion meta
 
 ;; This file is NOT part of GNU Emacs.
 
