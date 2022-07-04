@@ -3,7 +3,7 @@
          "Insert alt codes using meta key")
 
 (website-url "https://github.com/jcs-elpa/alt-codes")
-(keywords "alt" "codes" "insertion" "meta")
+(keywords "convenience" "alt" "codes" "insertion" "meta")
 
 (package-file "alt-codes.el")
 
