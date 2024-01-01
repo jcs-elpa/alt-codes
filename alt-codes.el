@@ -1,6 +1,6 @@
 ;;; alt-codes.el --- Insert alt codes using meta key  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2022  Shen, Jen-Chieh
+;; Copyright (C) 2019-2024  Shen, Jen-Chieh
 ;; Created date 2019-06-23 00:27:18
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
