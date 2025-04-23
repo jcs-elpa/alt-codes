@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "alt-codes"
          "0.0.5"
          "Insert alt codes using meta key")
